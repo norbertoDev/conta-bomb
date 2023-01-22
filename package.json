@@ -2,7 +2,7 @@
   "name": "conta-bomb",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://myname.github.io/myapp",
+  "homepage": "http://norbertoDev.github.io/conta-bomb",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
