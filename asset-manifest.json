@@ -1,15 +1,15 @@
 {
-  "main.css": "/myapp/static/css/main.0afa00ee.chunk.css",
-  "main.js": "/myapp/static/js/main.d2e30ca8.chunk.js",
-  "main.js.map": "/myapp/static/js/main.d2e30ca8.chunk.js.map",
-  "runtime~main.js": "/myapp/static/js/runtime~main.539d3c3c.js",
-  "runtime~main.js.map": "/myapp/static/js/runtime~main.539d3c3c.js.map",
-  "static/js/2.1dd4c610.chunk.js": "/myapp/static/js/2.1dd4c610.chunk.js",
-  "static/js/2.1dd4c610.chunk.js.map": "/myapp/static/js/2.1dd4c610.chunk.js.map",
-  "static/js/3.b2f32255.chunk.js": "/myapp/static/js/3.b2f32255.chunk.js",
-  "static/js/3.b2f32255.chunk.js.map": "/myapp/static/js/3.b2f32255.chunk.js.map",
-  "index.html": "/myapp/index.html",
-  "precache-manifest.26af5d6f9b2a6094962db58c48cb7000.js": "/myapp/precache-manifest.26af5d6f9b2a6094962db58c48cb7000.js",
-  "service-worker.js": "/myapp/service-worker.js",
-  "static/css/main.0afa00ee.chunk.css.map": "/myapp/static/css/main.0afa00ee.chunk.css.map"
+  "main.css": "/conta-bomb/static/css/main.0afa00ee.chunk.css",
+  "main.js": "/conta-bomb/static/js/main.d2e30ca8.chunk.js",
+  "main.js.map": "/conta-bomb/static/js/main.d2e30ca8.chunk.js.map",
+  "runtime~main.js": "/conta-bomb/static/js/runtime~main.422b0f86.js",
+  "runtime~main.js.map": "/conta-bomb/static/js/runtime~main.422b0f86.js.map",
+  "static/js/2.1dd4c610.chunk.js": "/conta-bomb/static/js/2.1dd4c610.chunk.js",
+  "static/js/2.1dd4c610.chunk.js.map": "/conta-bomb/static/js/2.1dd4c610.chunk.js.map",
+  "static/js/3.b2f32255.chunk.js": "/conta-bomb/static/js/3.b2f32255.chunk.js",
+  "static/js/3.b2f32255.chunk.js.map": "/conta-bomb/static/js/3.b2f32255.chunk.js.map",
+  "index.html": "/conta-bomb/index.html",
+  "precache-manifest.5b06832fc89d1a7c8dac27e182906997.js": "/conta-bomb/precache-manifest.5b06832fc89d1a7c8dac27e182906997.js",
+  "service-worker.js": "/conta-bomb/service-worker.js",
+  "static/css/main.0afa00ee.chunk.css.map": "/conta-bomb/static/css/main.0afa00ee.chunk.css.map"
 }
