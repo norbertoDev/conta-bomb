@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { TextField, withStyles, withTheme } from "@mui/material";
+import { Dialog, DialogActions, DialogContent, TextField, withStyles, withTheme } from "@mui/material";
 import { color } from "@mui/system";
 
 
@@ -28,10 +28,51 @@ export const BarButtonContainer = styled.div`
 `
 
 export const ButtonStyled = styled.button`
-  width: 70px;
-  height: 30px;
+  text-align: center;
+  width: 80px;
+  height: 50px;
 `
 
 export const TextFiedStyled = styled(TextField)`
 
+`;
+
+
+export const DialogContentStyled = styled(DialogContent)`
+&.correcto {
+  background-color:#008000
+  ;
+}
+&.bomba {
+  background-color: black;
+  color: white;
+  & .dialogText {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+}
+background-color: red;
+  & .dialogText {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+  }
+`
+
+export const DialoActionStyled = styled(DialogActions)`
+  &.correcto {
+    background-color:#008000;
+  }
+
+  &.bomba {
+    background-color: black;
+    color: white;
+    & .dialogText {
+      text-align: center;
+      color: white;
+      font-weight: bold;
+    }
+  }
+  background-color: red;
 `;

@@ -1,6 +1,6 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, MenuItem, Select, SelectChangeEvent } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import { BarButtonContainer, ButtonStyled, TextFiedStyled, TimerContainer } from './style';
+import { BarButtonContainer, ButtonStyled, DialoActionStyled, DialogContentStyled, TextFiedStyled, TimerContainer } from './style';
 
 interface ITimer {
     minutes?: number;
@@ -8,15 +8,17 @@ interface ITimer {
     code?: string;
 };
 
-const Timer = ({minutes = 60, seconds = 0, code= "esto no esta selected"} : ITimer) => {
+const Timer = ({minutes = 15, seconds = 0, code= "esto no esta selected"} : ITimer) => {
 
     const [mins, setMinutes] = useState(minutes);
     const [secs, setSeconds] = useState(seconds);
     const [result, setResult] = useState(code); //el codigo
-    const [open, setOpen] = React.useState(false);
-    const [text, setText] = useState("PASSWORD CORRECTO"); //texto del modal
+    const [open, setOpen] = useState(false);
+    const [text, setText] = useState("INTENTALO DE NUEVO"); //texto del modal
+    const [explota, setExplota] = useState(false);
     const [selected, setSelected] = useState("");
     const [password, setPassword] = useState("");
+    const [theme, setTheme] = useState("normal");
     const [start,setStart] = useState(false)
 
     useEffect(() => {
@@ -28,6 +30,10 @@ const Timer = ({minutes = 60, seconds = 0, code= "esto no esta selected"} : ITim
           if (secs === 0) {
             if (mins === 0) {
               clearInterval(sampleInterval);
+              setText("Bomba Explotada");
+              setTheme("bomba");
+              setOpen(true);
+              setExplota(true);
             } else {
               setMinutes(mins - 1);
               setSeconds(59);
@@ -54,14 +60,15 @@ const Timer = ({minutes = 60, seconds = 0, code= "esto no esta selected"} : ITim
     }
 
     const validateResult = (data : string) => {
-      console.log("result -> ",typeof result);
-      console.log("data -> ",typeof data);
 
       if(data.trim() === result.trim()){
-        console.log("bingoooo")
         setText("PASSWORD CORRECTO");
+        setTheme("correcto");
+        setSeconds(15);
+        setStart(false);
       }else {
         setText("INTENTALO DE NUEVO");
+        setTheme("no");
       }
     }
 
@@ -73,23 +80,19 @@ const Timer = ({minutes = 60, seconds = 0, code= "esto no esta selected"} : ITim
       setText("INTENTALO DE NUEVO");
       setSelected(event.target.value as string);
   };
-
-    //console.log("mins", mins);
-    //console.log("secs", secs);
     return (
     <TimerContainer>
         <Select
         className='este'
         labelId="demo-simple-select-label"
         id="demo-simple-select"
-        defaultValue={"1º ESO"}
         value={selected}
         label="Select curso"
         onChange={handleChange}
         >
-            <MenuItem value={"95767256"}>1º ESO</MenuItem>
-            <MenuItem value={"75796562"}>2º ESO</MenuItem>
-            <MenuItem value={"62675795"}>3º ESO</MenuItem>
+            <MenuItem value={"95767256"}>VERDE</MenuItem>
+            <MenuItem value={"75796562"}>AMARILLO</MenuItem>
+            <MenuItem value={"62675795"}>ROJO</MenuItem>
         </Select>
         <h2>{mins}:{secs < 10 ? `0${secs}` : secs}</h2>
         <TextFiedStyled
@@ -103,8 +106,8 @@ const Timer = ({minutes = 60, seconds = 0, code= "esto no esta selected"} : ITim
                 }}
             />
         <BarButtonContainer>
-          <ButtonStyled onClick={onClickCheck}> Check </ButtonStyled>
-          <ButtonStyled onClick={onClickReset}> Start </ButtonStyled>
+          <ButtonStyled onClick={onClickCheck}> Comprobar </ButtonStyled>
+          <ButtonStyled onClick={onClickReset}> Empezar </ButtonStyled>
         </BarButtonContainer>
         <Dialog
         open={open}
@@ -112,16 +115,16 @@ const Timer = ({minutes = 60, seconds = 0, code= "esto no esta selected"} : ITim
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
+        <DialogContentStyled className={theme}>
+          <DialogContentText id="alert-dialog-description" className='dialogText'>
               {text}
           </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} autoFocus>
+        </DialogContentStyled>
+        <DialoActionStyled className={theme}>
+          <Button onClick={handleClose} disabled={explota} autoFocus>
             Agree
           </Button>
-        </DialogActions>
+        </DialoActionStyled>
       </Dialog>
     </TimerContainer>
     )
