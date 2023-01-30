@@ -122,7 +122,7 @@ const Timer = ({minutes = 15, seconds = 0, code= "esto no esta selected"} : ITim
         </DialogContentStyled>
         <DialoActionStyled className={theme}>
           <Button onClick={handleClose} disabled={explota} autoFocus>
-            Agree
+            Aceptar
           </Button>
         </DialoActionStyled>
       </Dialog>
