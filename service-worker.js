@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/conta-bomb/precache-manifest.62068f3e28edec69f6da85842c7a3b43.js"
+  "/conta-bomb/precache-manifest.f681ab122fe4af6d8f191e3e4b468b2e.js"
 );
 
 workbox.clientsClaim();
