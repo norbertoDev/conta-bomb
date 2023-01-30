@@ -1,8 +1,10 @@
 import styled from "@emotion/styled";
+import acero from "../../assets/acero.png";
 
 
 export const BodyContainer = styled.div`
-    background-color: blue;
+    background-image: url(${acero});
+    background-size: cover;
     display:flex;
     align-items: center;
     justify-content: center;
