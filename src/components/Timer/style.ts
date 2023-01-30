@@ -40,7 +40,7 @@ export const TextFiedStyled = styled(TextField)`
 
 export const DialogContentStyled = styled(DialogContent)`
 &.correcto {
-  background-color:#008000
+  background-color:#00ff00
   ;
 }
 &.bomba {
@@ -62,7 +62,7 @@ background-color: red;
 
 export const DialoActionStyled = styled(DialogActions)`
   &.correcto {
-    background-color:#008000;
+    background-color:#00ff00;
   }
 
   &.bomba {
