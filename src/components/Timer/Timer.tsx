@@ -12,7 +12,7 @@ const Timer = ({minutes = 15, seconds = 0, code= "esto no esta selected"} : ITim
 
     const [mins, setMinutes] = useState(minutes);
     const [secs, setSeconds] = useState(seconds);
-    const [result, setResult] = useState(code); //el codigo
+    const [result, setResult] = useState(code); //el c   digo
     const [open, setOpen] = useState(false);
     const [text, setText] = useState("INTENTALO DE NUEVO"); //texto del modal
     const [explota, setExplota] = useState(false);
